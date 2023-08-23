@@ -80,7 +80,7 @@ const Feed = () => {
       const response = await fetch("/api/prompt");
       const data = await response.json();
       setPosts(data.reverse());
-      setOriginalPosts(data.reverse());
+      setOriginalPosts(data);
       if (posts.length===0) {
         setIsLoading(true);
       }
