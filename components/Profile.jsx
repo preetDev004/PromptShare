@@ -1,6 +1,19 @@
+"use client";
+
 import PromptCard from "./PromptCard";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    }
+  }, [isLoading]);
+
   return (
     <section className="w-full">
       <h1 className="head_text text-left">
@@ -30,10 +43,18 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
           </div>
         ) : (
           <div className="mt-16 w-full flex justify-center items-center">
-            <p className="text-md md:text-xl font-semibold opacity-80 text-gray-400">
-              You Do not have any Posts yet!
-            </p>
-            
+            {isLoading ? (
+              <Image
+                width={50}
+                height={50}
+                alt="loader"
+                src={"/assets/icons/loader.svg"}
+              />
+            ) : (
+              <p className="text-md md:text-xl font-semibold opacity-80 text-gray-400">
+                You do not have any Posts yet!
+              </p>
+            )}
           </div>
         )}
       </div>
