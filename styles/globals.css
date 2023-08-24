@@ -9,6 +9,7 @@
 */
 body::-webkit-scrollbar {
   display: none; /* Adjust the width as needed */
+  scroll-behavior: smooth;
 }
 
 .main {
@@ -118,7 +119,7 @@ body::-webkit-scrollbar {
 
 .search_input {
   /* @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0; */
-  @apply block w-full rounded-md border border-gray-300 text-gray-200 bg-white/10 py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+  @apply block w-full rounded-md border border-gray-300 text-gray-200 bg-white/10 py-2.5 font-satoshi pl-5 pr-12 text-medium shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
 }
 
 
@@ -144,12 +145,12 @@ body::-webkit-scrollbar {
 /* Form Component */
 .form_textarea {
   /* @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0; */
-  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm bg-black/50 text-gray-200 outline-0;
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-medium bg-black/50 text-gray-200 outline-0;
 }
 
 .form_input {
   /* @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0; */
-  @apply w-full flex rounded-lg mt-2 p-3 text-sm bg-black/50 text-gray-200 outline-0;
+  @apply w-full flex rounded-lg mt-2 p-3  text-medium bg-black/50 text-gray-200 outline-0;
 
 }
 
@@ -201,6 +202,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 textarea{
   resize: none;
+  font-size: 18px;
 }
 .prompt_grid {
   display: grid;
@@ -210,6 +212,11 @@ textarea{
 }
 
 @media (min-width: 640px) {
+  body{
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+  }
   .prompt_grid {
     grid-template-columns: repeat(2, 1fr); /* Two columns on screens with min-width: 640px */
     grid-gap: 1.5rem; /* Adjust the gap for larger screens */

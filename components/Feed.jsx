@@ -5,13 +5,15 @@ import PromptCard from "./PromptCard";
 import Image from "next/image";
 
 const PromptCardList = ({ data, handleTagClick, isLoading, setIsLoading }) => {
+  const [time, setTime] = useState(5000)
   useEffect(() => {
     if(isLoading){
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, time);
     }
-  }, [isLoading])
+    setTime(800);
+  }, [data, isLoading])
   
   return (
     <>
