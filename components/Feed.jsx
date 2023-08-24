@@ -95,7 +95,7 @@ const Feed = () => {
       setIsLoading(false);
       filterPosts(searchText);
     }
-  }, []);
+  }, [searchText, originalPosts]);
 
   return (
     <section className="feed">
