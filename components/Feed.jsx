@@ -18,9 +18,10 @@ const PromptCardList = ({ data, handleTagClick, isLoading, setIsLoading }) => {
   return (
     <>
       {data.length !== 0 ? (
+        <div className="w-autoc min-h-[50vh] md:min-h-[85vh]">
         <div
           className={`mt-16 ${
-            data.length === 1 ? "" : "w-full sm:w-auto prompt_grid"
+            data.length === 1 ? "" : "w-full sm:w-auto prompt_grid "
           }`}
         >
           {data &&
@@ -32,8 +33,9 @@ const PromptCardList = ({ data, handleTagClick, isLoading, setIsLoading }) => {
               />
             ))}
         </div>
+        </div>
       ) : (
-        <div className="mt-16 w-full flex justify-center items-center">
+        <div className={`mt-16 w-full flex flex-col items-center min-h-[50vh] md:min-h-[85vh]`}>
           {isLoading ? (<Image
             width={50}
             height={50}
