@@ -122,7 +122,6 @@ body::-webkit-scrollbar {
   @apply block w-full rounded-md border border-gray-300 text-gray-200 bg-white/10 py-2.5 font-satoshi pl-5 pr-12 text-medium shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
 }
 
-
 .copy_btn {
   @apply w-7 h-7 rounded-full bg-white/20 backdrop-blur-lg backdrop-filter flex justify-center items-center cursor-pointer;
 }
@@ -135,7 +134,6 @@ body::-webkit-scrollbar {
 .prompt_layout {
   @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
 }
-
 
 /* Feed Component */
 .feed {
@@ -153,7 +151,6 @@ body::-webkit-scrollbar {
   @apply w-full flex rounded-lg mt-2 p-3  text-medium bg-black/50 text-gray-200 outline-0;
 
 }
-
 /* Nav Component */
 .logo_text {
   /* @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide; */
